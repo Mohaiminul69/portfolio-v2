@@ -5,6 +5,7 @@ import AudioController from "./../../components/AudioController/index";
 import SidepanelSlider from "../../components/sidepanel-slider";
 import Header from "../../components/header";
 import Footer from "../../components/Footer";
+import Sidenav from "../../components/Sidenav";
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -84,6 +85,7 @@ export default function Home() {
             handleVolume={handleVolume}
             toggleMute={toggleMute}
           />
+          <Sidenav />
           <Footer />
         </>
       )}

@@ -1,14 +1,13 @@
 import "./index.css";
 
 const sentences = [
-  "Full Stack Dev",
-  "React & Node.js",
-  "UI Craftsman",
-  "Problem Solver",
-  "Always Learning",
-  "Open Source Fan",
-  "Always Learning",
-  "React & Node.js",
+  "I am a question to the world",
+  "Not an answer to be heard",
+  "Or a moment that's held in your arms",
+  "And what do you think you'd ever say?",
+  "I won't listen anyway",
+  "You don't know me",
+  "And I'll never be what you want me to be",
 ];
 
 const SidepanelSlider = () => {
