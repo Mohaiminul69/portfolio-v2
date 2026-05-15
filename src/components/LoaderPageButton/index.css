@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scene {
+  min-height: 100vh;
+  background: #050510;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    radial-gradient(
+      ellipse at 20% 50%,
+      rgba(0, 255, 255, 0.04) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 80% 50%,
+      rgba(255, 0, 200, 0.04) 0%,
+      transparent 60%
+    );
+  font-family: "Orbitron", sans-serif;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Base Button */
+.neon-btn {
+  position: relative;
+  padding: 8px 16px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid;
+  cursor: pointer;
+  outline: none;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease,
+    letter-spacing 0.3s ease;
+  clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+}
+
+.neon-btn span {
+  position: relative;
+  z-index: 1;
+  transition: text-shadow 0.3s ease;
+}
+
+/* Cyan variant */
+.btn-cyan {
+  color: #00f5ff;
+  border-color: #00f5ff;
+  box-shadow:
+    0 0 8px rgba(0, 245, 255, 0.3),
+    inset 0 0 8px rgba(0, 245, 255, 0.05);
+}
+
+.btn-cyan:hover {
+  background: rgba(0, 245, 255, 0.08);
+  letter-spacing: 6px;
+  box-shadow:
+    0 0 20px rgba(0, 245, 255, 0.7),
+    0 0 50px rgba(0, 245, 255, 0.4),
+    0 0 100px rgba(0, 245, 255, 0.15),
+    inset 0 0 20px rgba(0, 245, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-cyan:hover span {
+  text-shadow:
+    0 0 8px #00f5ff,
+    0 0 20px #00f5ff,
+    0 0 40px #00f5ff;
+}
+
+/* Magenta variant */
+.btn-magenta {
+  color: #ff00cc;
+  border-color: #ff00cc;
+  box-shadow:
+    0 0 8px rgba(255, 0, 204, 0.3),
+    inset 0 0 8px rgba(255, 0, 204, 0.05);
+}
+
+.btn-magenta:hover {
+  background: rgba(255, 0, 204, 0.08);
+  letter-spacing: 6px;
+  box-shadow:
+    0 0 20px rgba(255, 0, 204, 0.7),
+    0 0 50px rgba(255, 0, 204, 0.4),
+    0 0 100px rgba(255, 0, 204, 0.15),
+    inset 0 0 20px rgba(255, 0, 204, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-magenta:hover span {
+  text-shadow:
+    0 0 8px #ff00cc,
+    0 0 20px #ff00cc,
+    0 0 40px #ff00cc;
+}
+
+/* Lime variant */
+.btn-lime {
+  color: #aaff00;
+  border-color: #aaff00;
+  box-shadow:
+    0 0 8px rgba(170, 255, 0, 0.3),
+    inset 0 0 8px rgba(170, 255, 0, 0.05);
+}
+
+.btn-lime:hover {
+  background: rgba(170, 255, 0, 0.08);
+  letter-spacing: 6px;
+  box-shadow:
+    0 0 20px rgba(170, 255, 0, 0.7),
+    0 0 50px rgba(170, 255, 0, 0.4),
+    0 0 100px rgba(170, 255, 0, 0.15),
+    inset 0 0 20px rgba(170, 255, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-lime:hover span {
+  text-shadow:
+    0 0 8px #aaff00,
+    0 0 20px #aaff00,
+    0 0 40px #aaff00;
+}
+
+/* Active press */
+.neon-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Crimson variant */
+.btn-magenta {
+  color: crimson;
+  border-color: crimson;
+  box-shadow:
+    0 0 8px rgba(220, 20, 60, 0.3),
+    inset 0 0 8px rgba(220, 20, 60, 0.05);
+}
+
+.btn-magenta:hover {
+  background: rgba(220, 20, 60, 0.08);
+  letter-spacing: 6px;
+  box-shadow:
+    0 0 20px rgba(220, 20, 60, 0.7),
+    0 0 50px rgba(220, 20, 60, 0.4),
+    0 0 100px rgba(220, 20, 60, 0.15),
+    inset 0 0 20px rgba(220, 20, 60, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-magenta:hover span {
+  text-shadow:
+    0 0 8px #dc143c,
+    0 0 20px #dc143c,
+    0 0 40px #dc143c;
+}
+
+/* Flicker animation on load */
+@keyframes button-flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.6;
+  }
+}
+
+.neon-btn {
+  animation: button-flicker 5s infinite;
+}
+
+.btn-magenta {
+  animation-delay: 0.4s;
+}
+.btn-lime {
+  animation-delay: 0.8s;
+}

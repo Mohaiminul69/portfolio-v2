@@ -1,0 +1,126 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: #0d0d0d;
+}
+
+.loader--out {
+  animation: loader-out 0.5s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes loader-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.loader-gif {
+  width: min(50px, 55vw);
+  height: auto;
+}
+
+.loader-prompt {
+  font-family: system-ui, "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+
+.loader-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 220px;
+}
+
+.loader-percent {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.loader-bar-track {
+  width: 100%;
+  height: 4px;
+}
+
+.loader-bar-fill {
+  border-radius: 50px;
+  height: 100%;
+  background: crimson;
+  box-shadow: 0 0 6px crimson;
+  transition: width 0.05s linear;
+}
+
+.loader-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: btns-in 0.4s ease forwards;
+}
+
+@keyframes btns-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loader-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.6rem;
+  border-radius: 3px;
+  font-family: system-ui, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+.loader-btn--sound {
+  background: rgba(180, 0, 0, 0.12);
+  border: 1px solid rgba(200, 0, 0, 0.55);
+  color: #ff3300;
+}
+
+.loader-btn--sound:hover {
+  background: rgba(180, 0, 0, 0.25);
+  box-shadow: 0 0 18px rgba(200, 0, 0, 0.25);
+}
+
+.loader-btn--mute {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.loader-btn--mute:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
