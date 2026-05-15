@@ -165,7 +165,7 @@ const VolumeKnob = ({ volume, muted, onChange }) => {
       {displayVol > 0.005 && (
         <path
           d={arcPath(START_DEG, currentDeg, TRACK_R)}
-          stroke="crimson"
+          stroke="#e50833"
           strokeWidth="4"
           fill="none"
           strokeLinecap="round"
@@ -236,7 +236,7 @@ const VolumeKnob = ({ volume, muted, onChange }) => {
             y1={start.y}
             x2={needle.x}
             y2={needle.y}
-            stroke="crimson"
+            stroke="#e50833"
             strokeWidth="2.5"
             strokeLinecap="round"
             style={{ filter: "drop-shadow(0 0 4px rgba(220, 20, 60,0.9))" }}

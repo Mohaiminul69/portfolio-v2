@@ -1,0 +1,97 @@
+.header {
+  position: fixed;
+  top: 40px;
+  left: 95px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  color: #e70534;
+  justify-content: center;
+  border-radius: 6px 0 0 6px;
+  z-index: 100;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-right: none;
+}
+
+.header::before {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left: none;
+  border-radius: 0 0 550% 0;
+  content: "";
+  position: absolute;
+  top: -4px;
+  bottom: 0;
+  height: calc(100% + 8px);
+  right: -150px;
+  width: 150px;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.header__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.header__designation {
+  font-size: 1rem;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__contact-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  min-width: 40px;
+}
+
+.footer__contact-value {
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.footer__copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  color: crimson;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+
+.footer__copy-btn:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
+}
+
+.footer__copy-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: crimson;
+}
+
+.footer__copy-btn--copied svg {
+  fill: #2ecc71;
+}

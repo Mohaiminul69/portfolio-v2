@@ -11,7 +11,7 @@
     transparent 75%
   );
   border-radius: 17px;
-  border: 12px solid rgb(25, 25, 25);
+  border: 12px solid rgba(20, 20, 20, 1);
 }
 
 .bg-video {

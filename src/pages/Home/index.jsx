@@ -2,6 +2,9 @@ import { useRef, useState } from "react";
 import bgVideo from "@assets/videos/background.webm";
 import PageLoader from "../../components/PageLoader";
 import AudioController from "./../../components/AudioController/index";
+import SidepanelSlider from "../../components/sidepanel-slider";
+import Header from "../../components/header";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -72,12 +75,17 @@ export default function Home() {
           handleSoundChoice={handleSoundChoice}
         />
       ) : (
-        <AudioController
-          muted={muted}
-          volume={volume}
-          handleVolume={handleVolume}
-          toggleMute={toggleMute}
-        />
+        <>
+          <Header />
+          <SidepanelSlider />
+          <AudioController
+            muted={muted}
+            volume={volume}
+            handleVolume={handleVolume}
+            toggleMute={toggleMute}
+          />
+          <Footer />
+        </>
       )}
     </div>
   );
