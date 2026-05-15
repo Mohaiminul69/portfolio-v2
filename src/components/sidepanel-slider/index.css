@@ -2,7 +2,7 @@
   position: fixed;
   top: 40px;
   left: 40px;
-  height: calc(100% - 150px);
+  height: calc(100% - 144px);
   width: 40px;
   display: flex;
   align-items: center;
