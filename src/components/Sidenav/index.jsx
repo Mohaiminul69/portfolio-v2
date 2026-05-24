@@ -1,23 +1,20 @@
 import "./index.css";
 
-const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "About", href: "#about" },
-  { name: "Review", href: "#review" },
-];
+const navLinks = ["Home", "Skills", "Projects", "About", "Review"];
 
-const Sidenav = () => {
+const Sidenav = ({ currentPage, onPageChange }) => {
   return (
     <nav className="sidenav">
       <ul className="sidenav__list">
-        {navLinks.map(({ name, href }) => (
+        {navLinks.map((name, index) => (
           <li key={name}>
-            <a href={href} className="sidenav__link">
+            <button
+              className={`sidenav__link${currentPage === index ? " sidenav__link--active" : ""}`}
+              onClick={() => onPageChange(index)}
+            >
               <span className="sidenav__dot" />
               <span className="sidenav__label">{name}</span>
-            </a>
+            </button>
           </li>
         ))}
       </ul>

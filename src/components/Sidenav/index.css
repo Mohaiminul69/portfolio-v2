@@ -51,6 +51,9 @@
   gap: 10px;
   transform: rotate(-5deg);
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
   color: rgba(255, 255, 255, 0.55);
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -60,6 +63,11 @@
   transition:
     color 0.2s,
     transform 0.2s;
+}
+
+.sidenav__link--active {
+  color: #e50833;
+  transform: rotate(-5deg) translateX(3px);
 }
 
 .sidenav__link:hover {
@@ -79,7 +87,8 @@
     transform 0.2s;
 }
 
-.sidenav__link:hover .sidenav__dot {
+.sidenav__link:hover .sidenav__dot,
+.sidenav__link--active .sidenav__dot {
   opacity: 1;
   transform: scale(1.3);
 }

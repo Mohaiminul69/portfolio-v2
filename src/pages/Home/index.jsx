@@ -6,10 +6,11 @@ import SidepanelSlider from "../../components/sidepanel-slider";
 import Header from "../../components/header";
 import Footer from "../../components/Footer";
 import Sidenav from "../../components/Sidenav";
-import Topnav from "../../components/Topnav";
+import Pagination from "./../../components/Pagination/index";
 
 export default function Home() {
   const videoRef = useRef(null);
+  const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [fadingOut, setFadingOut] = useState(false);
   const [muted, setMuted] = useState(true);
@@ -79,7 +80,7 @@ export default function Home() {
       ) : (
         <>
           <Header />
-          <Topnav />
+          {/* <Topnav /> */}
           <SidepanelSlider />
           <AudioController
             muted={muted}
@@ -87,7 +88,8 @@ export default function Home() {
             handleVolume={handleVolume}
             toggleMute={toggleMute}
           />
-          <Sidenav />
+          <Pagination currentPage={page} onPageChange={setPage} />
+          <Sidenav currentPage={page} onPageChange={setPage} />
           <Footer />
         </>
       )}
