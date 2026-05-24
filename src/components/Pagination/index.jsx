@@ -23,6 +23,8 @@ const PAGES = ["Home", "Skills", "Projects", "About", "Review"];
 const Pagination = ({ currentPage, onPageChange }) => {
   const [xPos, setXPos] = useState(0);
   const [gap, setGap] = useState(50);
+  const [displayedPercent, setDisplayedPercent] = useState(0);
+  const displayedPercentRef = useRef(0);
   const wrapperRef = useRef(null);
   const progressPointRef = useRef(null);
 
@@ -33,6 +35,25 @@ const Pagination = ({ currentPage, onPageChange }) => {
     if (progressPointRef.current)
       setGap(progressPointRef.current.offsetWidth / 2 + 8);
   }, [currentPage]);
+
+  useEffect(() => {
+    const target = Math.round(progress);
+    const start = displayedPercentRef.current;
+    const duration = 500;
+    const startTime = performance.now();
+    let rafId;
+
+    const tick = (now) => {
+      const t = Math.min((now - startTime) / duration, 1);
+      const val = Math.round(start + (target - start) * t);
+      displayedPercentRef.current = val;
+      setDisplayedPercent(val);
+      if (t < 1) rafId = requestAnimationFrame(tick);
+    };
+
+    rafId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafId);
+  }, [currentPage, progress]);
 
   const switchPage = (index, bypass = -1) => {
     const targetPos = (-index + 2) * BTN_WIDTH;
@@ -139,6 +160,7 @@ const Pagination = ({ currentPage, onPageChange }) => {
           {PAGES[currentPage]}
         </span>
       </div>
+      <span className="progress-percent">{displayedPercent}%</span>
     </div>
   );
 };

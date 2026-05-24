@@ -223,6 +223,16 @@
   transition: --progress 0.5s;
 }
 
+.progress-percent {
+  display: flex;
+  justify-content: end;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: rgba(220, 20, 60,1);
+  margin-right: 50px;
+  letter-spacing: 0.05em;
+}
+
 .progress-bar .progress-point {
   position: absolute;
   top: 50%;
