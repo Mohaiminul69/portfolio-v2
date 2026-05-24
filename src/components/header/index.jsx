@@ -41,7 +41,13 @@ const Header = () => {
   return (
     <header className="header">
       <h1 className="header__name">Mohaiminul Islam Shishir</h1>
-      <p className="header__designation">Software Engineer</p>
+      <div className="header__designation-row">
+        <p className="header__designation">Software Engineer</p>
+        <span className="header__open-to-work">
+          <span className="header__status-dot" />
+          Open to work
+        </span>
+      </div>
       {/* <div className="footer__contacts">
         <CopyField label="Email" value="mursalinaraf4884@gmail.com" />
         <CopyField label="Phone" value="+880 000 000 0000" />
