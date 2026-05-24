@@ -6,6 +6,7 @@ import SidepanelSlider from "../../components/sidepanel-slider";
 import Header from "../../components/header";
 import Footer from "../../components/Footer";
 import Sidenav from "../../components/Sidenav";
+import Topnav from "../../components/Topnav";
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -78,6 +79,7 @@ export default function Home() {
       ) : (
         <>
           <Header />
+          <Topnav />
           <SidepanelSlider />
           <AudioController
             muted={muted}
