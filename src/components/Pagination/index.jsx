@@ -3,15 +3,45 @@ import "./index.css";
 
 const BTN_WIDTH = 4;
 
+const ArrowIcon = ({ direction, className }) => (
+  <svg
+    viewBox="0 0 200 200"
+    fill="none"
+    className={className}
+    style={{
+      width: "18px",
+      height: "18px",
+      transform: direction === "left" ? "rotate(180deg)" : "none",
+    }}
+  >
+    <path
+      d="
+      M 72 52
+      Q 62 34 74 24
+      L 166 100
+      L 74 176
+      Q 62 166 72 148
+      L 122 100
+      L 82 64
+    "
+      stroke="currentColor"
+      strokeWidth="6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 const AnimatedArrow = ({ direction, count = 6 }) => {
   const indices = Array.from({ length: count }, (_, i) => i + 1);
   const ordered = direction === "left" ? [...indices].reverse() : indices;
   return (
     <div className="custom-animated">
       {ordered.map((i) => (
-        <i
+        <ArrowIcon
           key={i}
-          className={`fas fa-angle-${direction} custom-animated__angle custom-animated__angle--${i}`}
+          direction={direction}
+          className={`custom-animated__angle custom-animated__angle--${i}`}
         />
       ))}
     </div>

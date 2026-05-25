@@ -125,22 +125,21 @@
   position: relative;
   display: flex;
   height: 2.4rem;
-  width: 4rem;
+  width: 3.6rem;
   border: none;
   background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: transform 0.3s;
   background: rgba(0, 0, 0, 1);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50% 6px 6px 50%;
 }
 
 .pagination-extreme:hover {
-  border: 2px solid rgba(220, 20, 60,0.8);
-  transition: all 0.4s ease-in-out;
+  border: 1px solid rgba(220, 20, 60, 0.8);
+  transition: all 0.5s ease-in-out;
 }
 
 .pagination-extreme--left {
@@ -163,7 +162,7 @@
 }
 
 .custom-animated .custom-animated__angle {
-  width: 9px;
+  margin: -5px;
   display: flex;
   align-items: center;
 }
@@ -173,8 +172,7 @@
 }
 
 .custom-animated__angle {
-  color: #e50833;
-  font-size: 1.4rem;
+  fill: #e50833;
 }
 
 .pagination-extreme:hover .custom-animated__angle--1 {
@@ -228,7 +226,7 @@
   justify-content: end;
   font-size: 0.7rem;
   font-weight: bold;
-  color: rgba(220, 20, 60,1);
+  color: rgba(220, 20, 60, 1);
   margin-right: 50px;
   letter-spacing: 0.05em;
 }
