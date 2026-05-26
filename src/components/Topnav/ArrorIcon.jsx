@@ -1,4 +1,4 @@
-const ArrowIcon = ({ direction = "right", size = 40 }) => {
+const ArrowIcon = ({ direction = "right", size = 40, strokeColor }) => {
   return (
     <svg
       viewBox="0 0 200 200"
@@ -19,7 +19,7 @@ const ArrowIcon = ({ direction = "right", size = 40 }) => {
       L 122 100
       L 82 64
     "
-        stroke="currentColor"
+        stroke={strokeColor}
         strokeWidth="6"
         strokeLinecap="round"
         strokeLinejoin="round"

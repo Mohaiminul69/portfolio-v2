@@ -50,6 +50,7 @@
     rgb(0, 0, 0) 30%,
     rgba(0, 0, 0, 0)
   );
+  animation: button-flicker 5s infinite;
 }
 
 @keyframes scrollDown {
@@ -101,4 +102,22 @@
 
 .item7 {
   animation-delay: 0s;
+}
+
+@keyframes button-flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.6;
+  }
 }

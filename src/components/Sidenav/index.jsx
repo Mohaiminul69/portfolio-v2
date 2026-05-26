@@ -12,7 +12,6 @@ const Sidenav = ({ currentPage, onPageChange }) => {
               className={`sidenav__link${currentPage === index ? " sidenav__link--active" : ""}`}
               onClick={() => onPageChange(index)}
             >
-              <span className="sidenav__dot" />
               <span className="sidenav__label">{name}</span>
             </button>
           </li>
