@@ -3,50 +3,50 @@ import "./index.css";
 
 const BTN_WIDTH = 4;
 
-const ArrowIcon = ({ direction, className }) => (
-  <svg
-    viewBox="0 0 200 200"
-    fill="none"
-    className={className}
-    style={{
-      width: "18px",
-      height: "18px",
-      transform: direction === "left" ? "rotate(180deg)" : "none",
-    }}
-  >
-    <path
-      d="
-      M 72 52
-      Q 62 34 74 24
-      L 166 100
-      L 74 176
-      Q 62 166 72 148
-      L 122 100
-      L 82 64
-    "
-      stroke="currentColor"
-      strokeWidth="6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
+// const ArrowIcon = ({ direction, className }) => (
+//   <svg
+//     viewBox="0 0 200 200"
+//     fill="none"
+//     className={className}
+//     style={{
+//       width: "18px",
+//       height: "18px",
+//       transform: direction === "left" ? "rotate(180deg)" : "none",
+//     }}
+//   >
+//     <path
+//       d="
+//       M 72 52
+//       Q 62 34 74 24
+//       L 166 100
+//       L 74 176
+//       Q 62 166 72 148
+//       L 122 100
+//       L 82 64
+//     "
+//       stroke="currentColor"
+//       strokeWidth="6"
+//       strokeLinecap="round"
+//       strokeLinejoin="round"
+//     />
+//   </svg>
+// );
 
-const AnimatedArrow = ({ direction, count = 6 }) => {
-  const indices = Array.from({ length: count }, (_, i) => i + 1);
-  const ordered = direction === "left" ? [...indices].reverse() : indices;
-  return (
-    <div className="custom-animated">
-      {ordered.map((i) => (
-        <ArrowIcon
-          key={i}
-          direction={direction}
-          className={`custom-animated__angle custom-animated__angle--${i}`}
-        />
-      ))}
-    </div>
-  );
-};
+// const AnimatedArrow = ({ direction, count = 6 }) => {
+//   const indices = Array.from({ length: count }, (_, i) => i + 1);
+//   const ordered = direction === "left" ? [...indices].reverse() : indices;
+//   return (
+//     <div className="custom-animated">
+//       {ordered.map((i) => (
+//         <ArrowIcon
+//           key={i}
+//           direction={direction}
+//           className={`custom-animated__angle custom-animated__angle--${i}`}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
 
 const PAGES = ["Home", "Skills", "Projects", "About", "Review"];
 
@@ -105,14 +105,14 @@ const Pagination = ({ currentPage, onPageChange }) => {
     onPageChange(index);
   };
 
-  const goFirst = () => switchPage(0, Math.min(2, pageCount - 1));
-  const goLast = () => switchPage(pageCount - 1, Math.max(0, pageCount - 3));
-  const goPrev = () => {
-    if (currentPage > 0) switchPage(currentPage - 1);
-  };
-  const goNext = () => {
-    if (currentPage < pageCount - 1) switchPage(currentPage + 1);
-  };
+  // const goFirst = () => switchPage(0, Math.min(2, pageCount - 1));
+  // const goLast = () => switchPage(pageCount - 1, Math.max(0, pageCount - 3));
+  // const goPrev = () => {
+  //   if (currentPage > 0) switchPage(currentPage - 1);
+  // };
+  // const goNext = () => {
+  //   if (currentPage < pageCount - 1) switchPage(currentPage + 1);
+  // };
 
   useEffect(() => {
     const el = wrapperRef.current;
@@ -134,9 +134,9 @@ const Pagination = ({ currentPage, onPageChange }) => {
 
   return (
     <div className="pagination-outer" ref={wrapperRef}>
-      <div className="pagination-container">
+      {/* <div className="pagination-container">
         <div className="pg-row">
-          {/* <span className="pagination-info">{PAGES[currentPage]}</span> */}
+          <span className="pagination-info">{PAGES[currentPage]}</span>
 
           <button className="pagination-extreme" onClick={goFirst}>
             <AnimatedArrow direction="left" count={3} />
@@ -148,7 +148,7 @@ const Pagination = ({ currentPage, onPageChange }) => {
             <AnimatedArrow direction="left" count={1} />
           </button>
 
-          {/* <div className="pg-fill">
+          <div className="pg-fill">
             <div className="pagination-wrapper">
               <ul
                 className="pagination"
@@ -165,7 +165,7 @@ const Pagination = ({ currentPage, onPageChange }) => {
                 ))}
               </ul>
             </div>
-          </div> */}
+          </div>
 
           <button
             className="pagination-extreme pagination-extreme--oval"
@@ -180,15 +180,18 @@ const Pagination = ({ currentPage, onPageChange }) => {
             <AnimatedArrow direction="right" count={3} />
           </button>
         </div>
-      </div>
-
-      <div
-        className="progress-bar"
-        style={{ "--progress": `${progress}%`, "--gap": `${gap}px` }}
-      >
-        <span ref={progressPointRef} className="progress-point">
-          {PAGES[currentPage]}
-        </span>
+      </div> */}
+      <div className="progress-body">
+        <div className="progress-wrapper">
+          <div
+            className="progress-bar"
+            style={{ "--progress": `${progress}%`, "--gap": `${gap}px` }}
+          >
+            <span ref={progressPointRef} className="progress-point">
+              {PAGES[currentPage]}
+            </span>
+          </div>
+        </div>
       </div>
       <span className="progress-percent">{displayedPercent}%</span>
     </div>
