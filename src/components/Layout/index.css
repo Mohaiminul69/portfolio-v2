@@ -1,0 +1,5 @@
+.layout {
+  padding: 104px 100px 0 64px;
+  overflow: hidden;
+  height: calc(100% - 72px);
+}

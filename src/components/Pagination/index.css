@@ -27,8 +27,8 @@
 /* ── outer wrapper ── */
 .pagination-outer {
   position: fixed;
-  top: 40px;
-  right: 40px;
+  top: 36px;
+  right: 36px;
   display: flex;
   flex-direction: column;
   width: 40%;

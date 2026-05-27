@@ -1,7 +1,7 @@
 .audio-controls {
   position: fixed;
-  bottom: 6px;
-  right: 6px;
+  bottom: 0;
+  right: 0;
   z-index: 10;
   width: 110px;
   height: 110px;
