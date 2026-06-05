@@ -19,10 +19,11 @@ const Home = () => {
           <span className="hero-highlight">to next level.</span>
         </h1>
         <p className="hero-description">
-          I&apos;m a software engineer who builds fast, reliable, and beautiful
-          digital products — from <strong>clean architecture</strong> to{" "}
+          I build fast, reliable, and beautiful digital products — from{" "}
+          <strong>clean architecture</strong> to{" "}
           <strong>pixel-perfect interfaces</strong>. I turn ambitious ideas into
-          shipped reality. Then go play <strong>table tennis</strong>.
+          shipped reality. When I'm not coding, I'm probably playing{" "}
+          <strong>table tennis</strong>.
         </p>
         <div className="hero-experience">
           <div className="hero-exp-item">
