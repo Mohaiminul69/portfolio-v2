@@ -1,10 +1,18 @@
 import heroImg from "../../assets/images/hero-pic.png";
+import BorderGlow from "../../components/BorderGlow";
+import Orb from "../../components/Orb";
 import "./index.css";
 
 const Home = () => {
   return (
     <div className="home-page">
       <div className="image-wrapper">
+        <Orb
+          hue={-70}
+          hoverIntensity={0.15}
+          rotateOnHover={true}
+          backgroundColor="#000000"
+        />
         <div className="hero-ring" />
         <img src={heroImg} className="hero-img" alt="Hero" />
       </div>
@@ -44,7 +52,19 @@ const Home = () => {
           </div>
         </div>
         <div className="hero-cta">
-          <button className="hero-btn-primary">View My Work</button>
+          <BorderGlow
+            edgeSensitivity={30}
+            glowColor="40 80 80"
+            backgroundColor="#dc143c"
+            borderRadius={4}
+            glowRadius={40}
+            glowIntensity={1}
+            coneSpread={25}
+            animated={false}
+            colors={["#c084fc", "#f472b6", "#38bdf8"]}
+          >
+            <div className="hero-btn-padding">View My Work</div>
+          </BorderGlow>
           <button className="hero-btn-secondary">Contact Me</button>
         </div>
       </div>
