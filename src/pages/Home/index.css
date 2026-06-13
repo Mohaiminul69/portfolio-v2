@@ -61,9 +61,16 @@
   }
 }
 
+.mouse-capture {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
 .hero-img {
   position: relative;
   z-index: 3;
+  pointer-events: none;
   width: 100%;
   height: 100%;
   object-fit: cover;
