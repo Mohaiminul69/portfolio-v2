@@ -48,13 +48,15 @@
     transform 0.2s;
 }
 
-.footer__social-link:hover {
-  opacity: 0.75;
-  transform: translateY(-2px);
+.footer__social-link:hover svg {
+  fill: #fff;
 }
 
 .footer__social-link svg {
   width: 22px;
   height: 22px;
   fill: #e50833;
+  filter: drop-shadow(0 0 6px #a0021f) drop-shadow(0 0 12px #a0021f66);
+  transition: fill 0.5s;
+  animation: button-flicker 5s infinite;
 }

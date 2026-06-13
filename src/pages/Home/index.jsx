@@ -55,16 +55,17 @@ const Home = () => {
       </div>
       <div className="hero-content">
         <h1 className="hero-headline">
-          <span className="hero-strikethrough">A</span>I will take my job
+          Be the best version of you.
           <br />
-          <span className="hero-highlight">to next level.</span>
+          <span className="hero-headline--emphasis hero-highlight">
+            go beyond.
+          </span>
         </h1>
         <p className="hero-description">
-          I build fast, reliable, and beautiful digital products — from{" "}
-          <strong>clean architecture</strong> to{" "}
-          <strong>pixel-perfect interfaces</strong>. I turn ambitious ideas into
-          shipped reality. When I'm not coding, I'm probably playing{" "}
-          <strong>table tennis</strong>.
+          I am a software engineer who was drawn to a world where{" "}
+          <strong>design meets logic</strong> — a space where I can{" "}
+          <strong>imagine and create anything</strong>. That's what pulled me
+          into <strong>software engineering</strong>.
         </p>
         <div className="hero-experience">
           <div className="hero-exp-item">
@@ -76,16 +77,9 @@ const Home = () => {
           <div className="hero-exp-divider" />
           <div className="hero-exp-item">
             <span className="hero-exp-number">
-              40<span>+</span>
+              50<span>+</span>
             </span>
-            <span className="hero-exp-label">Projects Delivered</span>
-          </div>
-          <div className="hero-exp-divider" />
-          <div className="hero-exp-item">
-            <span className="hero-exp-number">
-              25<span>+</span>
-            </span>
-            <span className="hero-exp-label">Happy Clients</span>
+            <span className="hero-exp-label">Projects Developed</span>
           </div>
         </div>
         <div className="hero-cta">
