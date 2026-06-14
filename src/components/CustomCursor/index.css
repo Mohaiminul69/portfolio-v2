@@ -1,0 +1,53 @@
+.cursor-root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Wrap: JS drives translate(x,y) */
+.cursor-dot-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* Inner: only handles visual + click scale */
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: #000;
+  transition: transform 0.15s ease;
+}
+
+/* Wrapper: JS drives translate(x,y) for spring position */
+.cursor-follower-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Inner: only handles the click scale animation */
+.cursor-follower {
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(231, 5, 50, 0.45) 10%,
+    rgba(231, 5, 50, 0) 70%
+  );
+}
+
+.cursor-dot--click {
+  transform: scale(0.5);
+}
